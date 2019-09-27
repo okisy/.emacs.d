@@ -16,10 +16,10 @@
 
 ;;;; This snippet enables lua-mode
 ;; This line is not necessary, if lua-mode.el is already on your load-path
-(add-to-list 'load-path (locate-user-emacs-file "elisp/lua-mode"))
-(autoload 'lua-mode "lua-mode" "Lua editing mode." t)
-(add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
-(add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
+;(add-to-list 'load-path (locate-user-emacs-file "elisp/lua-mode"))
+;(autoload 'lua-mode "lua-mode" "Lua editing mode." t)
+;(add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
+;(add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
 
 
 
@@ -28,3 +28,7 @@
 
 (global-set-key "\C-h" 'delete-backward-char)
 (global-set-key "\M-g" 'goto-line)
+(global-set-key (kbd "C-c <left>")  'windmove-left)
+(global-set-key (kbd "C-c <down>")  'windmove-down)
+(global-set-key (kbd "C-c <up>")    'windmove-up)
+(global-set-key (kbd "C-c <right>") 'windmove-right)

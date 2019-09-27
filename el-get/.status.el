@@ -1,9 +1,9 @@
-((ample-regexps status "installed" recipe
+((ample-regexps status "required" recipe
 		(:name ample-regexps :description "Compose and reuse Emacs regular expressions with ease" :type github :pkgname "immerrr/ample-regexps.el"))
  (el-get status "required")
  (hide-comnt status "installed" recipe
 	     (:type github :pkgname "emacsmirror/hide-comnt" :name hide-comnt :after nil :description "Hide/show comments in code." :type emacsmirror))
- (lua-mode status "installed" recipe
+ (lua-mode status "required" recipe
 	   (:name lua-mode :description "A major-mode for editing Lua scripts" :depends
 		  (ample-regexps)
 		  :type github :pkgname "immerrr/lua-mode"))

@@ -3,63 +3,8 @@
 ;;; Code:
 
 
-;;;### (autoloads nil "../elisp/ample-regexps/ample-regexps" "../elisp/ample-regexps/ample-regexps.el"
-;;;;;;  (23327 54960 954359 502000))
-;;; Generated autoloads from ../elisp/ample-regexps/ample-regexps.el
-
-(autoload 'define-arx "../elisp/ample-regexps/ample-regexps" "\
-Generate a custom rx-like macro under name MACRO.
-
-See `rx' for how the generated macro can be invoked.
-
-FORM-DEFS is a list of custom s-exp definitions to create whose
-elements have the form (SYM DEF), where DEF is one of
-the following:
-
-- \"LITERAL\" -- create a matcher to match a string literally
-
-- (regexp \"LITERAL\") -- create a match given a regexp
-
-- SYMBOL -- create an alias for a symbol either defined earlier
-  on the list or provided by `rx'
-
-- (SUBFORM ...) -- create an alias for an application of s-exp
-  subform either defined earlier on the list or provided by `rx'
-
-- (:func #'FORM-FUNC ...) -- create an s-exp definition
-
-The most interesting here is the last variant.  When a
-corresponding rx form will be encountered, FORM-FUNC will be
-called with all elements of that form as arguments (with the
-first one being the form symbol itself).  FORM-FUNC must then
-return a valid s-exp or a properly grouped plain regexp.
-
-Another keywords that are recognized in the plist are:
-- :min-args -- minimum number of arguments for that form (default nil)
-- :max-args -- maximum number of arguments for that form (default nil)
-- :predicate -- if given, all rx form arguments must satisfy it
-
-\(fn MACRO FORM-DEFS)" nil t)
-
-(autoload 'arx-and "../elisp/ample-regexps/ample-regexps" "\
-Generate an expression to match a sequence of FORMS.
-
-\(fn FORMS)" nil nil)
-
-(autoload 'arx-or "../elisp/ample-regexps/ample-regexps" "\
-Generate an expression to match one of FORMS.
-
-\(fn FORMS)" nil nil)
-
-(autoload 'arx-builder "../elisp/ample-regexps/ample-regexps" "\
-Run `re-builder' using arx form named ARX-NAME.
-
-\(fn &optional ARX-NAME)" t nil)
-
-;;;***
-
 ;;;### (autoloads nil "../elisp/hide-comnt/hide-comnt" "../elisp/hide-comnt/hide-comnt.el"
-;;;;;;  (23328 41351 246570 190000))
+;;;;;;  (23947 890 217105 384000))
 ;;; Generated autoloads from ../elisp/hide-comnt/hide-comnt.el
 
 (defvar ignore-comments-flag t "\
@@ -115,32 +60,8 @@ it needs `comment-search-forward'.
 
 ;;;***
 
-;;;### (autoloads nil "../elisp/lua-mode/lua-mode" "../elisp/lua-mode/lua-mode.el"
-;;;;;;  (23327 54965 411829 365000))
-;;; Generated autoloads from ../elisp/lua-mode/lua-mode.el
-
-(autoload 'lua-mode "../elisp/lua-mode/lua-mode" "\
-Major mode for editing Lua code.
-
-\(fn)" t nil)
-
-(add-to-list 'auto-mode-alist '("\\.lua\\'" . lua-mode))
-
-(add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
-
-(defalias 'run-lua #'lua-start-process)
-
-(autoload 'lua-start-process "../elisp/lua-mode/lua-mode" "\
-Start a Lua process named NAME, running PROGRAM.
-PROGRAM defaults to NAME, which defaults to `lua-default-application'.
-When called interactively, switch to the process buffer.
-
-\(fn &optional NAME PROGRAM STARTFILE &rest SWITCHES)" t nil)
-
-;;;***
-
 ;;;### (autoloads nil "../elisp/undo-tree/undo-tree" "../elisp/undo-tree/undo-tree.el"
-;;;;;;  (0 0 0 0))
+;;;;;;  (23947 901 908996 527000))
 ;;; Generated autoloads from ../elisp/undo-tree/undo-tree.el
 
 (autoload 'undo-tree-mode "../elisp/undo-tree/undo-tree" "\
@@ -164,9 +85,8 @@ Within the undo-tree visualizer, the following keys are available:
 \(fn &optional ARG)" t nil)
 
 (defvar global-undo-tree-mode nil "\
-Non-nil if Global Undo-Tree mode is enabled.
-See the `global-undo-tree-mode' command
-for a description of this minor mode.
+Non-nil if Global-Undo-Tree mode is enabled.
+See the command `global-undo-tree-mode' for a description of this minor mode.
 Setting this variable directly does not take effect;
 either customize it (see the info node `Easy Customization')
 or call the function `global-undo-tree-mode'.")
@@ -175,7 +95,7 @@ or call the function `global-undo-tree-mode'.")
 
 (autoload 'global-undo-tree-mode "../elisp/undo-tree/undo-tree" "\
 Toggle Undo-Tree mode in all buffers.
-With prefix ARG, enable Global Undo-Tree mode if ARG is positive;
+With prefix ARG, enable Global-Undo-Tree mode if ARG is positive;
 otherwise, disable it.  If called from Lisp, enable the mode if
 ARG is omitted or nil.
 
@@ -184,13 +104,6 @@ Undo-Tree mode is enabled in all buffers where
 See `undo-tree-mode' for more information on Undo-Tree mode.
 
 \(fn &optional ARG)" t nil)
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "../elisp/undo-tree/undo-tree" '("undo-" "turn-on-undo-tree-mode" "*undo-tree-id-counter*" "buffer-undo-tree")))
-
-;;;***
-
-;;;### (autoloads nil nil ("../elisp/ample-regexps/init-tryout.el"
-;;;;;;  "../elisp/lua-mode/init-tryout.el") (0 0 0 0))
 
 ;;;***
 
