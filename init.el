@@ -21,7 +21,7 @@
 ;(add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
 ;(add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
 
-
+(load-theme 'wombat t)
 
 (el-get-bundle hide-comnt)
 (el-get-bundle undo-tree)
